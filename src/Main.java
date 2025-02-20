@@ -6,6 +6,7 @@ public class Main {
         Algorithm[] algs = {
             new InsertionSort(), 
             new SelectionSort(),
+            new ShellSort(),
         };
         String[] fileDirs = {
             "data/bad.txt",
