@@ -1,11 +1,29 @@
+import SortingAlgorithms.*;
+
 public class Main {
     
     public static void main(String[] args) {
-        int[] arr1 = {1,9,7,5,4,7,6,2};
-        SelectionSort.sort(arr1);
-        for (int e : arr1){
-            System.out.print(e + " ");
+        Algorithm[] algs = {
+            new InsertionSort(), 
+            new SelectionSort(),
+        };
+        String[] fileDirs = {
+            "data/bad.txt",
+            "data/dutch.txt",
+            "data/int20k.txt",
+            "data/int10.txt",
+            "data/int50.txt",
+            "data/int100.txt",
+            "data/int500k.txt",
+            "data/int1000.txt",
+            "data/intBig.txt",
+        };
+        for (String file: fileDirs){
+            int[] a = ReadFile.read(file);
+            String fileName = file.substring(5);
+            System.out.println("\n-------------------");
+            System.out.println("\nTime taken to sort " + fileName + ":");
+            TimeSortingAlgorithms.time(algs, a);
         }
-        System.out.println(TestSortingAlgorithms.isSorted(arr1));
     }
 }
