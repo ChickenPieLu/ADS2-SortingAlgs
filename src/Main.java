@@ -10,6 +10,9 @@ public class Main {
             new MergeSort(),
             new InsMergeSort(),
             new BotMergeSort(),
+            new QuickSort(),
+            new Median3QuickSort(),
+            new InsQuickSort(),
         };
         String[] fileDirs = {
             "data/bad.txt",
