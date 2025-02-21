@@ -7,6 +7,9 @@ public class Main {
             new InsertionSort(), 
             new SelectionSort(),
             new ShellSort(),
+            new MergeSort(),
+            new InsMergeSort(),
+            new BotMergeSort(),
         };
         String[] fileDirs = {
             "data/bad.txt",
